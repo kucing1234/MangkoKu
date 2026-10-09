@@ -31,13 +31,19 @@ export const styles = StyleSheet.create({
   card: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
     backgroundColor: "#FFFFFF",
-    padding: 16,
+    padding: 12,
     borderRadius: 16,
     marginBottom: 12,
     elevation: 3,
     shadowColor: "#000",
+  },
+  foto: {
+    width: 72,
+    height: 72,
+    borderRadius: 12,
+    marginRight: 12,
+    backgroundColor: "#E5E7EB",
   },
   cardInfo: {
     flex: 1,

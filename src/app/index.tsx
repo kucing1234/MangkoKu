@@ -1,28 +1,8 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Alert, FlatList, Pressable, StyleSheet, Text, View } from "react-native";
-
-// ===== TYPE & INTERFACE =====
-type MenuType = "bakso" | "minuman" | "tambahan";
-
-interface MenuItem {
-  readonly id: string;
-  name: string;
-  price: number;
-  type?: MenuType;
-  isAvailable: boolean;
-}
-
-// ===== ARRAY OF OBJECTS =====
-const menus: MenuItem[] = [
-  { id: "1", name: "Bakso Urat", price: 15000, type: "bakso", isAvailable: true },
-  { id: "2", name: "Bakso Beranak", price: 20000, type: "bakso", isAvailable: true },
-  { id: "3", name: "Bakso Mercon", price: 18000, type: "bakso", isAvailable: false },
-  { id: "4", name: "Bakso Tlogomas", price: 17000, type: "bakso", isAvailable: true },
-  { id: "5", name: "Es Teh Manis", price: 5000, type: "minuman", isAvailable: true },
-  { id: "6", name: "Es Jeruk", price: 6000, type: "minuman", isAvailable: true },
-  { id: "7", name: "Tahu Bakso", price: 3000, type: "tambahan", isAvailable: true },
-  { id: "8", name: "Kerupuk", price: 2000, type: "tambahan", isAvailable: false },
-];
+import { Alert, FlatList, Image, Pressable, Text, View } from "react-native";
+import { styles } from "../constants/styles";
+import { menus } from "../data/menus";
+import { MenuItem } from "../types/menu";
 
 export default function Index() {
   // Loop primitif: hitung menu yang tersedia
@@ -42,10 +22,16 @@ export default function Index() {
   const renderMenuCard = (item: MenuItem) => {
     return (
       <View style={styles.card}>
+        {/* Gambar menu, kalau kosong pakai gambar pengganti */}
+        <Image
+          source={{ uri: item.image ?? "https://picsum.photos/200" }}
+          style={[styles.foto, { opacity: item.isAvailable ? 1 : 0.4 }]}
+        />
+
         <View style={styles.cardInfo}>
           <Text style={styles.name}>{item.name}</Text>
           <Text style={styles.type}>{item.type ?? "menu"}</Text>
-          {/* Inline style dinamis */}
+          {/* Inline style dinamis: warna harga sesuai ketersediaan */}
           <Text
             style={{
               fontSize: 15,
@@ -59,7 +45,7 @@ export default function Index() {
           </Text>
         </View>
 
-        {/* Ternary: tombol atau label habis */}
+        {/* Ternary: tombol pesan atau label habis */}
         {item.isAvailable ? (
           <Pressable style={styles.button} onPress={() => handleOrder(item)}>
             <Ionicons name="add-circle" size={18} color="white" />
@@ -92,71 +78,3 @@ export default function Index() {
     </View>
   );
 }
-
-// ===== STYLESHEET =====
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#FFF7ED",
-    paddingHorizontal: 20,
-    paddingTop: 50,
-  },
-  header: {
-    alignItems: "center",
-    marginBottom: 20,
-  },
-  title: {
-    fontSize: 30,
-    fontWeight: "bold",
-    color: "#B91C1C",
-    marginTop: 6,
-  },
-  tagline: {
-    fontSize: 14,
-    color: "#7C2D12",
-    marginTop: 2,
-  },
-  summary: {
-    fontSize: 13,
-    color: "#431407",
-    textAlign: "center",
-    marginTop: 10,
-  },
-  card: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    backgroundColor: "#FFFFFF",
-    padding: 16,
-    borderRadius: 16,
-    marginBottom: 12,
-    elevation: 3,
-    shadowColor: "#000",
-  },
-  cardInfo: {
-    flex: 1,
-  },
-  name: {
-    fontSize: 17,
-    fontWeight: "bold",
-    color: "#431407",
-  },
-  type: {
-    fontSize: 12,
-    color: "#9A3412",
-    marginTop: 2,
-  },
-  button: {
-    backgroundColor: "#EA580C",
-    paddingVertical: 8,
-    paddingHorizontal: 14,
-    borderRadius: 10,
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  buttonText: {
-    color: "#FFFFFF",
-    fontWeight: "bold",
-    marginLeft: 4,
-  },
-});
