@@ -4,6 +4,9 @@ import { styles } from "../constants/styles";
 import { menus } from "../data/menus";
 import { MenuItem } from "../types/menu";
 
+
+const LOGO_URL = "https://loremflickr.com/300/300/meatball,soup?lock=10";
+
 export default function Index() {
   // Loop primitif: hitung menu yang tersedia
   let availableCount = 0;
@@ -22,12 +25,6 @@ export default function Index() {
   const renderMenuCard = (item: MenuItem) => {
     return (
       <View style={styles.card}>
-        {/* Gambar menu, kalau kosong pakai gambar pengganti */}
-        <Image
-          source={{ uri: item.image ?? "https://picsum.photos/200" }}
-          style={[styles.foto, { opacity: item.isAvailable ? 1 : 0.4 }]}
-        />
-
         <View style={styles.cardInfo}>
           <Text style={styles.name}>{item.name}</Text>
           <Text style={styles.type}>{item.type ?? "menu"}</Text>
@@ -61,7 +58,8 @@ export default function Index() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Ionicons name="restaurant" size={48} color="#B91C1C" />
+        {/* Gambar hanya di logo */}
+        <Image source={{ uri: LOGO_URL }} style={styles.logo} />
         <Text style={styles.title}>Mangkoku</Text>
         <Text style={styles.tagline}>Semangkok hangat, setiap hari.</Text>
         <Text style={styles.summary}>

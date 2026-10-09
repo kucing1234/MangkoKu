@@ -11,11 +11,17 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 20,
   },
+  logo: {
+    width: 110,
+    height: 110,
+    borderRadius: 55,
+    backgroundColor: "#FED7AA",
+  },
   title: {
     fontSize: 30,
     fontWeight: "bold",
     color: "#B91C1C",
-    marginTop: 6,
+    marginTop: 8,
   },
   tagline: {
     fontSize: 14,
@@ -32,18 +38,11 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: "#FFFFFF",
-    padding: 12,
+    padding: 16,
     borderRadius: 16,
     marginBottom: 12,
     elevation: 3,
     shadowColor: "#000",
-  },
-  foto: {
-    width: 72,
-    height: 72,
-    borderRadius: 12,
-    marginRight: 12,
-    backgroundColor: "#E5E7EB",
   },
   cardInfo: {
     flex: 1,
