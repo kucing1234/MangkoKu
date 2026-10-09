@@ -4,8 +4,8 @@ import { styles } from "../constants/styles";
 import { menus } from "../data/menus";
 import { MenuItem } from "../types/menu";
 
-
-const LOGO_URL = "https://loremflickr.com/300/300/meatball,soup?lock=10";
+const LOGO_URL =
+  "https://img.magnific.com/premium-vector/bakso-indonesian-meatball-bowl-hand-drawn-logo_513640-1467.jpg?w=2000";
 
 export default function Index() {
   // Loop primitif: hitung menu yang tersedia
