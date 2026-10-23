@@ -1,5 +1,13 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Alert, FlatList, Image, Pressable, Text, View } from "react-native";
+import {
+  Alert,
+  FlatList,
+  Image,
+  Platform,
+  Pressable,
+  Text,
+  View,
+} from "react-native";
 import { styles } from "../constants/styles";
 import { menus } from "../data/menus";
 import { MenuItem } from "../types/menu";
@@ -17,8 +25,14 @@ export default function Index() {
   }
 
   // Function bawaan (Alert) dibungkus function custom
+  // Di web pakai window.alert, di HP/emulator pakai Alert bawaan React Native
   const handleOrder = (item: MenuItem) => {
-    Alert.alert("Pesanan Masuk", `${item.name} berhasil dipesan!`);
+    const message = `${item.name} berhasil dipesan!`;
+    if (Platform.OS === "web") {
+      window.alert(message);
+    } else {
+      Alert.alert("Pesanan Masuk", message);
+    }
   };
 
   // Function custom: membuat kartu menu dari satu data
