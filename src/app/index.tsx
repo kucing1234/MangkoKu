@@ -1,19 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
-<<<<<<< HEAD
-import {
-  Alert,
-  FlatList,
-  Image,
-  Platform,
-  Pressable,
-  Text,
-  View,
-} from "react-native";
-=======
 import { useNavigation, useRouter } from "expo-router";
 import { useEffect, useState } from "react";
 import { FlatList, Image, Pressable, Text, View } from "react-native";
->>>>>>> 524a40a52c2ac0fdff933662e91fa78316f17120
 import { styles } from "../constants/styles";
 import { useCart } from "../context/CartContext";
 import { menus } from "../data/menus";
@@ -48,23 +36,11 @@ export default function Index() {
     }
   }
 
-<<<<<<< HEAD
-  // Function bawaan (Alert) dibungkus function custom
-  // Di web pakai window.alert, di HP/emulator pakai Alert bawaan React Native
-  const handleOrder = (item: MenuItem) => {
-    const message = `${item.name} berhasil dipesan!`;
-    if (Platform.OS === "web") {
-      window.alert(message);
-    } else {
-      Alert.alert("Pesanan Masuk", message);
-    }
-=======
   const shownMenus =
     filter === "semua" ? menus : menus.filter((m) => m.type === filter);
 
   const handleOrder = (item: MenuItem) => {
     addToCart(item);
->>>>>>> 524a40a52c2ac0fdff933662e91fa78316f17120
   };
 
   // Function custom: membuat kartu menu dari satu data
@@ -137,6 +113,14 @@ export default function Index() {
         renderItem={({ item }) => renderMenuCard(item)}
         showsVerticalScrollIndicator={false}
       />
+
+      <Pressable
+        style={[styles.cartBar, { backgroundColor: "#EA580C" }]}
+        onPress={() => router.push("/resep")}
+      >
+        <Ionicons name="book" size={20} color="white" />
+        <Text style={styles.cartBarText}>Resep Inspirasi (dari API)</Text>
+      </Pressable>
 
       {totalItems > 0 && (
         <Pressable
