@@ -114,6 +114,14 @@ export default function Index() {
         showsVerticalScrollIndicator={false}
       />
 
+      <Pressable
+        style={[styles.cartBar, { backgroundColor: "#EA580C" }]}
+        onPress={() => router.push("/resep")}
+      >
+        <Ionicons name="book" size={20} color="white" />
+        <Text style={styles.cartBarText}>Resep Inspirasi (dari API)</Text>
+      </Pressable>
+
       {totalItems > 0 && (
         <Pressable
           style={styles.cartBar}
