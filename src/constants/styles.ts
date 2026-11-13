@@ -1,12 +1,27 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#FFF7ED", paddingHorizontal: 20, paddingTop: 50 },
+  container: {
+    flex: 1,
+    backgroundColor: "#FFF7ED",
+    paddingHorizontal: 20,
+    paddingTop: 50,
+  },
   header: { alignItems: "center", marginBottom: 20 },
-  logo: { width: 110, height: 110, borderRadius: 55, backgroundColor: "#FED7AA" },
+  logo: {
+    width: 110,
+    height: 110,
+    borderRadius: 55,
+    backgroundColor: "#FED7AA",
+  },
   title: { fontSize: 30, fontWeight: "bold", color: "#B91C1C", marginTop: 8 },
   tagline: { fontSize: 14, color: "#7C2D12", marginTop: 2 },
-  summary: { fontSize: 13, color: "#431407", textAlign: "center", marginTop: 10 },
+  summary: {
+    fontSize: 13,
+    color: "#431407",
+    textAlign: "center",
+    marginTop: 10,
+  },
   card: {
     flexDirection: "row",
     alignItems: "center",
@@ -28,21 +43,8 @@ export const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
-<<<<<<< HEAD
-  buttonText: {
-    color: "#FFFFFF",
-    fontWeight: "bold",
-    marginLeft: 4,
-  },
-  filterRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    marginBottom: 12,
-  },
-=======
   buttonText: { color: "#FFFFFF", fontWeight: "bold", marginLeft: 4 },
   filterRow: { flexDirection: "row", flexWrap: "wrap", marginBottom: 12 },
->>>>>>> b0d3195faa4d53f94d6be4c05ccbb625876563dc
   chip: {
     paddingVertical: 6,
     paddingHorizontal: 14,
@@ -52,7 +54,11 @@ export const styles = StyleSheet.create({
     marginBottom: 6,
   },
   chipActive: { backgroundColor: "#EA580C" },
-  chipText: { color: "#9A3412", fontWeight: "bold", textTransform: "capitalize" },
+  chipText: {
+    color: "#9A3412",
+    fontWeight: "bold",
+    textTransform: "capitalize",
+  },
   chipTextActive: { color: "#FFFFFF" },
   cartBar: {
     backgroundColor: "#B91C1C",
@@ -66,7 +72,12 @@ export const styles = StyleSheet.create({
   cartBarText: { color: "#FFFFFF", fontWeight: "bold", marginLeft: 8 },
   detailContainer: { flex: 1, backgroundColor: "#FFF7ED", padding: 20 },
   detailName: { fontSize: 28, fontWeight: "bold", color: "#431407" },
-  detailPrice: { fontSize: 22, fontWeight: "bold", color: "#15803D", marginTop: 8 },
+  detailPrice: {
+    fontSize: 22,
+    fontWeight: "bold",
+    color: "#15803D",
+    marginTop: 8,
+  },
   qtyRow: { flexDirection: "row", alignItems: "center", marginTop: 20 },
   qtyButton: {
     backgroundColor: "#EA580C",
@@ -76,7 +87,12 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  qtyText: { fontSize: 20, fontWeight: "bold", marginHorizontal: 20, color: "#431407" },
+  qtyText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    marginHorizontal: 20,
+    color: "#431407",
+  },
   bigButton: {
     backgroundColor: "#EA580C",
     padding: 14,
@@ -84,7 +100,12 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 14,
   },
-  totalText: { fontSize: 20, fontWeight: "bold", color: "#431407", marginTop: 8 },
+  totalText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#431407",
+    marginTop: 8,
+  },
 
   // ---- Modul 3 ----
   recipeImage: {
@@ -94,9 +115,6 @@ export const styles = StyleSheet.create({
     marginRight: 12,
     backgroundColor: "#FED7AA",
   },
-<<<<<<< HEAD
-});
-=======
   detailImage: {
     width: "100%",
     height: 200,
@@ -105,8 +123,18 @@ export const styles = StyleSheet.create({
     backgroundColor: "#FED7AA",
   },
   centerBox: { alignItems: "center", justifyContent: "center", padding: 24 },
-  errorText: { color: "#DC2626", fontWeight: "bold", textAlign: "center", marginBottom: 12 },
-  sectionTitle: { fontSize: 16, fontWeight: "bold", color: "#B91C1C", marginTop: 14, marginBottom: 4 },
+  errorText: {
+    color: "#DC2626",
+    fontWeight: "bold",
+    textAlign: "center",
+    marginBottom: 12,
+  },
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#B91C1C",
+    marginTop: 14,
+    marginBottom: 4,
+  },
   bodyText: { fontSize: 14, color: "#431407", marginBottom: 2 },
 });
->>>>>>> b0d3195faa4d53f94d6be4c05ccbb625876563dc

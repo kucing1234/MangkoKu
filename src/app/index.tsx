@@ -85,7 +85,7 @@ export default function Index() {
       <View style={styles.header}>
         <Image source={{ uri: LOGO_URL }} style={styles.logo} />
         <Text style={styles.title}>Mangkoku</Text>
-        <Text style={styles.tagline}>Tes demo hari ini modul 2</Text>
+        <Text style={styles.tagline}>Mari Makan Bakso!</Text>
         <Text style={styles.summary}>
           {availableCount} dari {menus.length} menu tersedia hari ini
         </Text>
