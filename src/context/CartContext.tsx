@@ -25,7 +25,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       const found = prev.find((c) => c.item.id === item.id);
       if (found) {
         return prev.map((c) =>
-          c.item.id === item.id ? { ...c, qty: c.qty + qty } : c
+          c.item.id === item.id ? { ...c, qty: c.qty + qty } : c,
         );
       }
       return [...prev, { item, qty }];

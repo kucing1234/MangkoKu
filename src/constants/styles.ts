@@ -70,9 +70,6 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     marginLeft: 4,
   },
-<<<<<<< HEAD
-});
-=======
   filterRow: {
     flexDirection: "row",
     flexWrap: "wrap",
@@ -160,4 +157,3 @@ export const styles = StyleSheet.create({
     marginTop: 8,
   },
 });
->>>>>>> 524a40a52c2ac0fdff933662e91fa78316f17120
